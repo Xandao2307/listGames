@@ -1,7 +1,6 @@
 package com.AlexandreSouza.listGames.controllers;
 
 import com.AlexandreSouza.listGames.dto.GameMinDTO;
-import com.AlexandreSouza.listGames.entities.Game;
 import com.AlexandreSouza.listGames.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value="/games")
-public class GameControllers {
+public class GameController {
     @Autowired
     private GameService gameService;
 
