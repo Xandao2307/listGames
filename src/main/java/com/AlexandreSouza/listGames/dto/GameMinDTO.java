@@ -1,6 +1,7 @@
 package com.AlexandreSouza.listGames.dto;
 
 import com.AlexandreSouza.listGames.entities.Game;
+import com.AlexandreSouza.listGames.projections.GameMinProjection;
 
 public class GameMinDTO {
     private Long id;
@@ -12,6 +13,13 @@ public class GameMinDTO {
     public GameMinDTO() {
     }
     public GameMinDTO(Game game) {
+        this.id = game.getId();
+        this.title = game.getTitle();
+        this.year = game.getYear();;
+        this.imgUrl = game.getImgUrl();
+        this.shortDescription = game.getShortDescription();
+    }
+    public GameMinDTO(GameMinProjection game) {
         this.id = game.getId();
         this.title = game.getTitle();
         this.year = game.getYear();;
